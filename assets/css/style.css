@@ -1,0 +1,285 @@
+@import url(_font.scss);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+  font-family: "Lato";
+  margin: 0 auto;
+}
+
+.section {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #2B3040;
+  padding: 82px 220px;
+}
+
+.overlay {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-image: url(../img/photo_bg.jpg);
+  background-repeat: no-repeat;
+  padding: 154px 200px;
+}
+
+.tabs_nav {
+  width: 100%;
+  max-width: 600px;
+  padding: 28px 50px 28px 50px;
+  background-color: #2B3040;
+  margin: 0 auto;
+  display: flex;
+  gap: 70px;
+  justify-content: space-between;
+}
+
+.tabs_nav-btn {
+  background-color: #2B3040;
+  text-transform: uppercase;
+  font-family: "Lato";
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #8D91A3;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 
+  .tabs_nav-btn.active {
+    color: #FFFFFF;
+
+  }
+  .tabs_nav-btn:nth-child(2).active svg.col {
+    stroke: #FFFFFF;
+  }
+
+  .tabs_nav-btn:first-child .active svg {
+    /* fill: #FFFFFF; */
+/*    stroke: #FFFFFF; */
+.tabs_icon path.first {
+  stroke: #8D91A3;
+}
+
+.tabs_nav-btn.active {
+  color: #FFFFFF;
+}
+
+.tabs_nav-btn.active > .tabs_icon path {
+  stroke: #FFFFFF;
+}
+
+.tabs_nav-btn.active > .tabs_icon path.fill {
+  fill: #FFFF;
+}
+
+.tabs_item {
+  display: none;
+}
+
+.tabs_item.active {
+  display: flex;
+}
+
+.tabs_content {
+  width: 100%;
+  max-width: 600px;
+  background-color: #212534;
+}
+
+#tab-1 {
+  padding: 72px 40px 62px 40px;
+}
+
+.poster_photo {
+  width: 100%;
+  max-width: 160px;
+  margin-bottom: 20px;
+}
+
+.first {
+  justify-content: space-between;
+  gap: 40px;
+  font-family: "Lato";
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #B7BACD;
+}
+
+.title_items {
+  font-family: "Lato";
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+.subtitle_items {
+  font-family: "Lato";
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-bottom: 40px;
+}
+
+.describe_plot {
+  width: 100%;
+  max-width: 280px;
+  margin-right: 40px;
+  margin-bottom: 50px;
+}
+
+.tabs_icon {
+  margin-bottom: 15px;
+}
+
+.to_buy {
+  width: 100%;
+  max-width: 305px;
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+}
+
+.sale {
+  font-family: "Lato";
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #FFDD3F;
+  margin-bottom: 4px;
+}
+
+.cost {
+  font-family: "Lato";
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.btn_buy {
+  text-transform: uppercase;
+  padding: 20px 30px;
+  font-family: "Lato";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #FFFFFF;
+  border: none;
+  background-color: #13E28D;
+  border-radius: 3px;
+}
+.btn_buy:hover {
+  transform: scale(0.95);
+  transition: 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.text_items {
+  position: relative;
+}
+
+.rating {
+  width: 100%;
+  max-width: 170px;
+  text-align: center;
+  position: relative;
+}
+
+.rating_star {
+  display: inline-block;
+  margin-right: 8px;
+  color: #8D91A3;
+  transition: filter linear 0.3s;
+  width: 20px;
+  height: 20px;
+  font-size: 30px;
+  /*     &::before {
+        content: '\e802';
+        font-family: "fontello";
+        font-weight: normal;
+        font-style: normal;
+
+        color: gold;
+
+      } */
+}
+.rating_star:last-child {
+  margin-right: 0px;
+}
+
+.unchecked_star {
+  color: #8D91A3;
+}
+
+.checked_star {
+  color: #FFDD3F;
+}
+
+.rating__result {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-10px) translateX(-5px);
+  z-index: -9;
+  color: #ebebeb8e;
+  pointer-events: none;
+}
+
+.rating_star:hover {
+  cursor: pointer;
+  filter: drop-shadow(1px 1px 4px gold);
+}
+
+#donutt svg.donut circle.donut-bg {
+  stroke: #B7BACD;
+  stroke-width: 10px;
+}
+
+#donutt svg.donut circle.donut-fill {
+  stroke: #13E28D;
+}
+
+#donutt {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0px;
+  left: 230px;
+}
+
+.ratingNum {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  font-family: "Lato";
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #B7BACD;
+}
+
+.some {
+  width: 600px;
+  height: 439px;
+  text-align: center;
+  padding: 72px 40px 62px 40px;
+  font-family: "Lato";
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #B7BACD;
+}
