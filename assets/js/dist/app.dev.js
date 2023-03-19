@@ -38,11 +38,16 @@ stars.each(function (index, item) {
 
 /* const starsIndex = $(stars).attr('data-index'); */
 
+var activeIndex = null;
 stars.each(function (index, item) {
   var starsIndex = $(item).attr('data-index');
   $(item).click(function () {
     if ($(item).hasClass('checked_star')) {
-      $('.ratingNum').text(starsIndex);
+      activeIndex = starsIndex;
+    } else {
+      activeIndex = starsIndex - 1;
     }
+
+    $('.ratingNum').text(activeIndex);
   });
 });

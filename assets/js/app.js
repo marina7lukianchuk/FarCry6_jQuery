@@ -19,8 +19,8 @@ tabsBtn.each(function(index, item) {
 
 
 
-const stars = $('.rating_star');
 
+const stars = $('.rating_star');
 
 stars.each(function(index, item) {
   let i;
@@ -45,11 +45,17 @@ stars.each(function(index, item) {
 /* const raitNum = $('.ratingNum'); */
 /* const starsIndex = $(stars).attr('data-index'); */
 
+let activeIndex = null;
+
 stars.each(function(index, item) {
   const starsIndex = $(item).attr('data-index');
   $(item).click(function() {
     if ($(item).hasClass('checked_star')) {
-      $('.ratingNum').text(starsIndex);
+      activeIndex = starsIndex;
     }
+   else {
+    activeIndex = starsIndex - 1;
+    }
+    $('.ratingNum').text(activeIndex);
   });
 });
